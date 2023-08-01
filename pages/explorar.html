@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".././assets/css/global.css">
+    <link rel="stylesheet" href=".././assets/css/index.css">
+    <title>Anime Ranking</title>
+</head>
+<body>
+    <div class="message__save hidden">
+        <div class="message">
+            <div class="barraTime">
+                <div class="barra"></div>
+            </div>
+            <p>O anime foi salvo na sua lista! ✅</p>
+        </div>
+    </div>
+    <div class="anime_info_container hidden">
+    </div>
+
+    <header>
+        <div class="header_content">
+        <h1><a href="../index.html">AnimeRank</a></h1>
+        <nav>
+            <a href="./explorar.html">Explorar</a>
+            <a href="./mylist.html">Minha Lista</a>
+            <div class="search_container">
+                <input type="text" id="inputSearchAnime">
+                <img src="../assets/images/search-13-128.png" alt="">
+            </div>
+        </nav>
+        </div>
+    </header>
+    <main class="explorar_main">
+        <section class="animesCard_container">
+            <h2>Animes</h2> 
+
+            <div class="filterAnimes">
+                <form action="">
+                    <label for="">Filtro: </label>
+                    <select name="" id="">
+                        <option value="">Mais populares</option>
+                        <option value="">Menos populares</option>
+                        <option value="">Mais votados</option>
+                        <option value="">Menos votados</option>
+                        <option value="">Relêvancia</option>
+                        <option value="">Lançamento</option>
+                    </select>
+                </form>
+            </div>
+
+            <div id="animesList" class="animesList" data-animeQnt="50">
+                <!-- <div class="cardAnime">
+                    <img src="${image}" alt="">
+                    <div class="title_container">
+                        <p class="title_anime">${title.length > 50 ? cortarTitulo(title) : title}</p>
+                    </div>
+                </div> -->
+            </div>
+            <div id="pageBtns" class="btnPage_list">
+                <!-- <button id='${i}' class="pageBtn">${i}</button> -->
+            </div>
+        </section>
+    </main>
+    
+    <script src="../assets/js/explorar.js" type="module"></script>
+</body>
+</html>

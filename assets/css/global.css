@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Karla:ital,wght@0,400;0,700;0,800;1,400&family=Signika:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Karantina:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding and reset fonts */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #1B1B1B;
+}
+
+header {
+  background: #1B1B1B;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 5rem;
+}
+header .header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  font-family: "Signika";
+  max-width: 1440px;
+}
+header h1 {
+  font-size: 4.8rem;
+  font-family: "Karantina";
+}
+header h1 a {
+  color: #C03AFF;
+  text-decoration: none;
+  transition: 200ms;
+}
+header h1 a:hover {
+  color: #8223ae;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  margin-right: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.8rem;
+  transition: 100ms;
+}
+header nav a:hover {
+  color: rgb(142, 142, 142);
+}
+header nav .search_container {
+  display: flex;
+  align-items: center;
+}
+header nav .search_container input {
+  margin-right: 1rem;
+  border: none;
+  transition: 200ms;
+  outline: 2px solid #C03AFF;
+}
+header nav .search_container input:focus {
+  outline: 2px solid #8223ae;
+}
+header nav .search_container img {
+  width: 30px;
+}
+
+main {
+  padding-inline: 6.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #FFF;
+  font-family: "Jockey One";
+}
+
+.card_anime {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 3px;
+}
+.card_anime .animeImg {
+  min-width: 16.6rem;
+  max-width: 16.6rem;
+  min-height: 230px;
+  max-height: 230px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 2px solid #1B1B1B;
+}
+.card_anime .animeImg img {
+  cursor: pointer;
+  transition: 300ms;
+}
+.card_anime img:hover {
+  transform: scale(1.2);
+}
+.card_anime .titulo_anime {
+  color: #FFF;
+  text-align: center;
+  font-family: "Aoboshi One";
+  font-size: 1.6rem;
+  background: #303030;
+  position: relative;
+  border-radius: 0 0 3px 3px;
+  max-width: 16.6rem;
+  max-height: 6rem;
+  width: 100%;
+}
+
+.card_anime_large .animeImg {
+  min-width: 20.6rem;
+  max-width: 20.6rem;
+  min-height: 260px;
+  max-height: 260px;
+  width: 100%;
+}
+.card_anime_large .animeImg img {
+  border: 2px solid #1B1B1B;
+}
+.card_anime_large .titulo_anime {
+  max-width: 22.6rem;
+}
+
+.anime_info_container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.anime_info_container .anime-info {
+  background: #1B1B1B;
+  max-width: 900px;
+  max-height: 95vh;
+  border-radius: 5px;
+  color: #FFF;
+  overflow-y: scroll;
+  z-index: 3;
+}
+.anime_info_container .anime-info .animeHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.anime_info_container .anime-info .animeHeader .btn_fecharAnime {
+  z-index: 2;
+  position: absolute;
+  width: 850px;
+  text-align: right;
+  font-family: "Signika";
+}
+.anime_info_container .anime-info .animeHeader .btn_fecharAnime button {
+  color: #fff;
+  background: transparent;
+  font-size: 3.6rem;
+  border: none;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #080808;
+}
+.anime_info_container .anime-info .animeHeader .banner_info {
+  border-radius: 5px;
+  z-index: 0;
+  min-width: 900px;
+  max-width: 900px;
+  max-height: 300px;
+}
+.anime_info_container .anime-info .animeHeader .coverImage_info {
+  margin-top: -10%;
+  position: relative;
+  border: 5px inset #A4A4A4;
+  border-radius: 4px;
+  max-width: 20%;
+}
+.anime_info_container .anime-info .animeHeader h3 {
+  color: #FFF;
+  font-weight: 700;
+  font-family: "Signika";
+  font-size: 2.2rem;
+  margin-top: 1.8rem;
+}
+.anime_info_container .anime-info .animeHeader .genres_list {
+  font-family: "Signika";
+  font-weight: 700;
+  list-style-type: none;
+  display: flex;
+  opacity: 0.5;
+}
+.anime_info_container .anime-info .animeHeader .genres_list :not(:last-child) {
+  margin-right: 2rem;
+}
+.anime_info_container .anime-info .info {
+  color: #FFF;
+  font-family: "Karla";
+  padding: 2rem 3rem;
+}
+.anime_info_container .anime-info .info p {
+  font-size: 1.8rem;
+}
+.anime_info_container .anime-info .info p em {
+  font-style: italic;
+}
+.anime_info_container .anime-info .info .ver_mais {
+  background: transparent;
+  color: rgb(101, 0, 202);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.anime_info_container .anime-info .info .ver_mais:hover {
+  text-decoration: underline;
+}
+.anime_info_container .anime-info .info ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.anime_info_container .anime-info .info ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+.anime_info_container .anime-info .info ul strong {
+  font-weight: 700;
+}
+.anime_info_container .anime-info .btn_list {
+  color: #FFF;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.anime_info_container .anime-info .btn_list .form_myWatchList {
+  margin: 2rem 0;
+  justify-self: flex-end;
+}
+.anime_info_container .anime-info .btn_list .form_myWatchList input {
+  padding: 0.6rem 1.6rem;
+  font-weight: 800;
+  font-size: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #240853;
+  color: #fff;
+  transition: 300ms;
+  border: #240853 2px solid;
+}
+.anime_info_container .anime-info .btn_list .form_myWatchList input:hover {
+  background: #13042d;
+}
+.anime_info_container .anime-info .btn_list .form_myWatchList label {
+  font-family: "Signika";
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.anime_info_container .anime-info .btn_list .form_myRankList h3 {
+  font-family: "Signika";
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.anime_info_container .anime-info .btn_list .form_myRankList form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.anime_info_container .anime-info .btn_list .form_myRankList form #nota_animeInput {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+}
+.anime_info_container .anime-info .btn_list .form_myRankList form #nota_animeInput:focus {
+  outline: 1px solid #8223ae;
+  border: none;
+}
+.anime_info_container .anime-info .btn_list .form_myRankList form #salvar_nota {
+  font-weight: 600;
+  font-family: "Signika";
+  padding: 0.8rem 2.8rem;
+  color: white;
+  background: #240853;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 200ms;
+  margin-left: 2rem;
+  border: #240853 2px solid;
+}
+.anime_info_container .anime-info .btn_list .form_myRankList form #salvar_nota:hover {
+  background: #13042d;
+}
+
+.anime_info_container::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loading img {
+  width: 16.6rem;
+}
+
+.btn_ver_mais {
+  color: #FFF;
+  text-decoration: none;
+  background: #C03AFF;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding-inline: 0.8rem;
+  border: 1px solid #8223ae;
+  font-family: "Jockey One";
+  font-size: 1.6rem;
+  transition: 200ms;
+}
+
+.btn_ver_mais:hover {
+  background: #8223ae;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.message__save {
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+  color: #FFF;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem 3rem;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.message__save .message {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #303030;
+  border: 2px solid #303030;
+}
+.message__save .message .barraTime {
+  width: 100%;
+  height: 15px;
+  background: rgb(59, 59, 59);
+}
+.message__save .message .barraTime .barra {
+  background: #C03AFF;
+  height: 15px;
+  -webkit-animation: progressob 5s;
+          animation: progressob 5s;
+}
+.message__save .message p {
+  font-family: "Karantina";
+  font-size: 2.8rem;
+  padding: 1rem 2rem;
+}
+
+@-webkit-keyframes progressob {
+  0% {
+    width: 0%;
+    background-color: #303030;
+  }
+  100% {
+    width: 100%;
+    background: #C03AFF;
+  }
+}
+
+@keyframes progressob {
+  0% {
+    width: 0%;
+    background-color: #303030;
+  }
+  100% {
+    width: 100%;
+    background: #C03AFF;
+  }
+}
+@-webkit-keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=global.css.map */

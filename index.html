@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Anime Ranking</title>
+</head>
+<body>
+    <div class="message__save hidden">
+        <div class="message">
+            <div class="barraTime">
+                <div class="barra"></div>
+            </div>
+            <p>O anime foi salvo na sua lista! ✅</p>
+        </div>
+    </div>
+    
+    <div class="anime_info_container hidden">
+    </div>
+
+    <header>
+        <div class="header_content">
+            <h1><a href="./index.html">AnimeRank</a></h1>
+
+            <nav>
+                <a href="./pages/explorar.html">Explorar</a>
+                <a href="./pages/mylist.html">Minha Lista</a>
+                <div class="search_container">
+                    <input type="text" id="inputSearchAnime">
+                    <img src="./assets/images/search-13-128.png" alt="">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="index_main">
+        <div class="grid_row_column_index">
+            <div>
+                <section class="lancamentos_section row_section">
+                    <h2>Ultimos lançamentos e trending</h2>
+                    <div class="row_container lancamentos">
+                        <div class="loading">
+                            <img src="./assets/images/loading.gif" alt="">
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="minhaLista_section row_section">
+                    <h2>Minha Lista</h2>
+                    <div class="row_container lancamentos">
+                        <!-- <div class="card_anime">
+                            <div class="animeImg">
+                                <img src="./assets/images/coverImageEX.jpg" alt="">
+                            </div>
+                            <div class="titulo_anime">
+                                <p>Nome anime</p>
+                            </div>
+                        </div> -->
+                        <div class="loading">
+                            <img src="./assets/images/loading.gif" alt="">
+                        </div>
+                </section>
+            </div>
+            <section class="rank_animes_index">
+                <div class="title_link">
+                    <h2>Seu rank de animes</h2>
+                    <a class="btn_ver_mais" href="./pages/mylist.html">Ver todos</a>
+                </div>
+                
+                <div class="card_anime_rankIndex">
+                    <div class="posicao_rank">
+                        <p>1</p>
+                    </div>
+                    <div class="animeImg">
+                        <img src="./assets/images/coverImageEX.jpg" alt="">
+                    </div>
+                    <div class="infos titulo_anime">
+                        <p class="titulo">Nome anime</p>
+                        <p class="">Nota: 9.5</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+
+        <section class="populares_section explorar_section">
+            <div class="titulo_ver_container">
+                <h2>Animes populares</h2>
+                <a class="btn_ver_mais" href="./pages/explorar.html">Ver mais</a>
+            </div>
+            <div class="container_populares" id="animesList">
+                <div class="loading">
+                    <img src="./assets/images/loading.gif" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/js/main.js" type="module"></script>
+</body>
+</html>

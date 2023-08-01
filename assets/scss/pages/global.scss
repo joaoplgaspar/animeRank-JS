@@ -1,0 +1,453 @@
+@use '../abstracts/reset';
+@use '../abstracts/colors';
+@use '../abstracts/fonts';
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background: colors.$grafite;
+}
+
+header {
+    background: colors.$grafite;
+    border-bottom: 1px solid colors.$background-body;
+    margin-bottom: 5rem;
+
+    .header_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 1rem 4rem;
+        font-family: fonts.$font-signika;
+        max-width: 1440px;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+        font-family: fonts.$font-titulo;
+
+        a {
+            color: colors.$roxo-rosa;
+            text-decoration: none;
+            transition: 200ms;
+        }
+
+        a:hover {
+            color: colors.$roxo-rosa-escuro;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-right: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: colors.$texts-white;
+            font-size: 1.8rem;
+            transition: 100ms;
+        }
+
+        a:hover {
+            color: rgb(142, 142, 142);
+        }
+
+        .search_container {
+            display: flex;
+            align-items: center;
+
+            input {
+                margin-right: 1rem;
+                border: none;
+                transition: 200ms;
+                outline: 2px solid colors.$roxo-rosa;
+            }
+
+            input:focus {
+                outline: 2px solid colors.$roxo-rosa-escuro;
+            }
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+}
+
+main {
+    padding-inline: 6.6rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: colors.$texts-white;
+    font-family: fonts.$font-sub;
+}
+
+.card_anime{
+    width: fit-content;
+    border-radius: 3px;
+
+    .animeImg {
+        min-width: 16.6rem;
+        max-width: 16.6rem;
+        min-height: 230px;
+        max-height: 230px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+        border: 2px solid colors.$grafite;
+        
+
+        img {
+            cursor: pointer;
+            transition: 300ms;
+        }
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+
+    .titulo_anime {
+        color: colors.$texts-white;
+        text-align: center;
+        font-family: fonts.$font-aoboshi;
+        font-size: 1.6rem;
+        background: colors.$background-body;
+        position: relative;
+        border-radius: 0 0 3px 3px;
+        max-width: 16.6rem;
+        max-height: 6rem;
+        width: 100%;
+    }
+}
+
+.card_anime_large {
+
+    .animeImg {
+        min-width: 20.6rem;
+        max-width: 20.6rem;
+        min-height: 260px;
+        max-height: 260px;
+        width: 100%;
+
+        img {
+            border: 2px solid colors.$grafite;
+        }
+    }
+
+    .titulo_anime {
+        max-width: 22.6rem;
+    }
+}
+
+.anime_info_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    
+    .anime-info {
+        background: colors.$grafite;
+        max-width: 900px;
+        max-height: 95vh;
+        border-radius: 5px;
+        color: colors.$texts-white;
+        overflow-y: scroll;
+        z-index: 3;
+        
+        .animeHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .btn_fecharAnime {
+                z-index: 2;
+                position: absolute;
+                width: 850px;
+                text-align: right;
+                font-family: fonts.$font-signika;
+
+                button {
+                    color: #fff;
+                    background: transparent;
+                    font-size: 3.6rem;
+                    border: none;
+                    cursor: pointer;
+                    text-shadow: 0px 0px 10px #080808;
+                }
+            }
+
+            .banner_info {
+                border-radius: 5px;
+                z-index: 0;
+                min-width: 900px;
+                max-width: 900px;
+                max-height: 300px;
+            }
+
+            .coverImage_info {
+                margin-top: -10%;
+                position: relative;
+                border: 5px inset #A4A4A4;
+                border-radius: 4px;
+                max-width: 20%;
+            }
+
+            h3 {
+                color: colors.$texts-white;
+                font-weight: 700;
+                font-family: fonts.$font-signika;
+                font-size: 2.2rem;
+                margin-top: 1.8rem;
+            }
+
+            .genres_list {
+                font-family: fonts.$font-signika;
+                font-weight: 700;
+                list-style-type: none;
+                display: flex;
+                opacity: 0.5;
+
+                :not(:last-child) {
+                    margin-right: 2rem;
+                }
+            }
+            
+        }
+
+        .info {
+            color: colors.$texts-white;
+            font-family: fonts.$font-karla;
+            padding: 2rem 3rem;
+
+            p {
+                font-size: 1.8rem;
+
+                em {
+                    font-style: italic;
+                }
+            }
+
+            .ver_mais {
+                background: transparent;
+                color: rgb(101, 0, 202);
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+            }
+
+            .ver_mais:hover {
+                text-decoration: underline;
+            }
+
+            ul {
+                margin-top: 2rem;
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+
+                li:not(:last-child) {
+                    margin-right: 2rem;
+                }
+
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .btn_list {
+            color: colors.$texts-white;
+            padding-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;  
+
+            .form_myWatchList {
+                margin: 2rem 0;
+                justify-self: flex-end;
+
+                input {
+                    padding: 0.6rem 1.6rem;
+                    font-weight: 800;
+                    font-size: 2.2rem;
+                    border-radius: 50%;
+                    border: none;
+                    cursor: pointer;
+                    background: #240853;
+                    color: #fff;
+                    transition: 300ms;
+                    border: #240853 2px solid;
+                }
+
+                input:hover {
+                    background: #13042d;
+                }
+
+                label {
+                    font-family: fonts.$font-signika;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                }
+            }
+
+            .form_myRankList {
+
+                h3 {
+                    font-family: fonts.$font-signika;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                }
+
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    #nota_animeInput {
+                        width: max-content;
+                        padding: 0.8rem;
+                        border: none;
+                        border-radius: 5px;
+                    }
+
+                    #nota_animeInput:focus {
+                        outline: 1px solid colors.$roxo-rosa-escuro;
+                        
+                        border: none;
+                    }
+
+                    #salvar_nota {
+                        font-weight: 600;
+                        font-family: fonts.$font-signika;
+                        padding: 0.8rem 2.8rem;
+                        color: white;
+                        background: #240853;
+                        border: none;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        transition: 200ms;
+                        margin-left: 2rem;
+                        border: #240853 2px solid;
+                    }
+
+                    #salvar_nota:hover {
+                        background: #13042d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.anime_info_container::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    background: #000;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+
+.loading {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 16.6rem;
+    }
+}
+
+.btn_ver_mais {
+    color: colors.$texts-white;
+    text-decoration: none;
+    background: colors.$roxo-rosa;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-inline: 0.8rem;
+    border: 1px solid colors.$roxo-rosa-escuro;
+    font-family: fonts.$font-sub;
+    font-size: 1.6rem;
+    transition: 200ms;
+}
+
+.btn_ver_mais:hover {
+    background: colors.$roxo-rosa-escuro;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.message__save {
+    z-index: 5;
+    width: 100%;
+    position: fixed;
+    color: colors.$texts-white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 3rem;
+    animation-name: opacity;
+    animation-duration: 1s;
+    animation-delay: 5s;
+
+    .message {
+        width: fit-content;
+        background: colors.$background-body;
+        border: 2px solid colors.$cinza;
+
+        .barraTime {
+            width: 100%;
+            height: 15px;
+            background: colors.$cinza-alt;
+
+            .barra {
+                background: colors.$roxo-rosa;
+                height: 15px;
+                animation: progressob 5s;
+            }
+        }
+    
+        p {
+            font-family: fonts.$font-titulo;
+            font-size: 2.8rem;
+            padding: 1rem 2rem;
+        }
+    }
+}
+
+@keyframes progressob {
+    0% {
+        width: 0%;
+        background-color: colors.$background-body;
+    }
+    100% {
+        width: 100%;
+        background: colors.$roxo-rosa;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+      }
+    to {
+        opacity: 0;
+      }
+}

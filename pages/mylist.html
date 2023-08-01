@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".././assets/css/global.css">
+    <link rel="stylesheet" href=".././assets/css/index.css">
+    <title>MyList</title>
+</head>
+<body>
+    <div class="anime_info_container hidden">
+    </div>
+
+    <header>
+        <div class="header_content">
+        <h1><a href="../index.html">AnimeRank</a></h1>
+        <nav>
+            <a href="./explorar.html">Explorar</a>
+            <a href="./mylist.html">Minha Lista</a>
+            <div class="search_container">
+                <input type="text" id="inputSearchAnime">
+                <img src="../assets/images/search-13-128.png" alt="">
+            </div>
+        </nav>
+        </div>
+    </header>
+    <main class="mylist__main">
+        <div class="btn__assistir_rank">
+            <button class="btn__selected" data-btnSection="assistir__section">Quero assistir</button>
+            <button data-btnSection="rank__section">Meu rank</button>
+        </div>
+        <section class="assistir__section" id="assistir">
+        </section>
+        <section class="rank__section hidden" id="rank">
+        </section>
+    </main>
+
+    <script src="../assets/js/myList.js" type="module"></script>
+</body>
+</html>
