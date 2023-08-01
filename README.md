@@ -46,3 +46,8 @@ O AnimeRank é um projeto para descobrir novos animes e rankear seus animes pref
 - ``Métodos Assincronos``
 - ``Manipulação de DOM``
 - ``LocalStorage``
+
+## API por ANILIST
+
+<img src="https://github.com/joaoplgaspar/animeRank-JS/assets/130015259/d57fc581-4c8c-4155-9a02-1689ebcf94ba" width=200 />
+
